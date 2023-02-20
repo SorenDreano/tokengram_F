@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tokengram_F"
+version = "1.0.0"
+authors = [
+  { name="Sören Dréano", email="soren.dreano2@mail.dcu.ie" },
+]
+description = "A chrF-alternative Machine Translation score using SentencePiece"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Benchmark",
+]
+dependencies = [
+    "sentencepiece",
+    "bs4",
+    "requests",
+    "mistletoe",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tokengramF = ["*.spm", "*.md"]
+
+[project.urls]
+"Homepage" = "https://github.com/SorenDreano/tokengram_F"
+"Bug Tracker" = "https://github.com/SorenDreano/tokengram_F/issues"
